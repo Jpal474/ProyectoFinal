@@ -26,40 +26,37 @@ class FragmentProfile : Fragment() {
         val user = "1"
 
         myRef.child("usuarios").child(user).child("nombre").get().addOnSuccessListener { response ->
-           binding.tvUserName.setText(response.value.toString())
+           binding.tvUserName.setText("Nombre : ${response.value.toString()}")
         }.addOnFailureListener{
             Log.e("firebaseResponse", "Error getting data", it)
         }
-        myRef.child("usuarios").child("1").child("nombre").get().addOnSuccessListener { response ->
-            binding.tvUserName.setText(response.value.toString())
+
+        myRef.child("usuarios").child(user).child("edad").get().addOnSuccessListener { response ->
+            binding.tvUserAge.setText("Edad : ${response.value.toString()}")
         }.addOnFailureListener{
             Log.e("firebaseResponse", "Error getting data", it)
         }
-        myRef.child("usuarios").child("1").child("edad").get().addOnSuccessListener { response ->
-            binding.tvUserAge.setText(response.value.toString())
+        myRef.child("usuarios").child(user).child("email").get().addOnSuccessListener { response ->
+            binding.tvUserMail.setText("Email : ${response.value.toString()}")
         }.addOnFailureListener{
             Log.e("firebaseResponse", "Error getting data", it)
         }
-        myRef.child("usuarios").child("1").child("email").get().addOnSuccessListener { response ->
-            binding.tvUserMail.setText(response.value.toString())
+        myRef.child("usuarios").child(user).child("direccion").get().addOnSuccessListener { response ->
+            binding.tvUserAdress.setText("Direccion : ${response.value.toString()}")
         }.addOnFailureListener{
             Log.e("firebaseResponse", "Error getting data", it)
         }
-        myRef.child("usuarios").child("1").child("direccion").get().addOnSuccessListener { response ->
-            binding.tvUserAdress.setText(response.value.toString())
+        myRef.child("usuarios").child(user).child("password").get().addOnSuccessListener { response ->
+            binding.tvUserPassword.setText("Contraseña : ${response.value.toString()}")
         }.addOnFailureListener{
             Log.e("firebaseResponse", "Error getting data", it)
         }
-        myRef.child("usuarios").child("1").child("compras").get().addOnSuccessListener { response ->
-            binding.tvUserPassword.setText(response.value.toString())
+        myRef.child("usuarios").child(user).child("compras").get().addOnSuccessListener { response ->
+            binding.tvUserBuys.setText("Compras : ${response.value.toString()}")
         }.addOnFailureListener{
             Log.e("firebaseResponse", "Error getting data", it)
         }
-        myRef.child("usuarios").child("1").child("compras").get().addOnSuccessListener { response ->
-            binding.tvUserBuys.setText(response.value.toString())
-        }.addOnFailureListener{
-            Log.e("firebaseResponse", "Error getting data", it)
-        }
+        binding.ivUser.setImageResource(R.drawable.person_icon)
 
 
 

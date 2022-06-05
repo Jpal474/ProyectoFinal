@@ -17,7 +17,7 @@
         />
     <item
         android:id="@+id/fragmentProduct"
-        android:title="Products"
+        android:title="Wish List"
         android:icon="@drawable/product_icon"
 
         />

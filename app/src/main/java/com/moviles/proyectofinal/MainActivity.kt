@@ -9,6 +9,8 @@ import androidx.navigation.ui.setupWithNavController
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.firebase.database.ktx.database
 import com.google.firebase.ktx.Firebase
+import com.moviles.proyectofinal.databinding.FragmentHomeBinding
+import com.moviles.proyectofinal.databinding.ItemSugestBinding
 import com.moviles.proyectofinal.remote.ItemEntry
 import com.moviles.proyectofinal.remote.RetrofitBuilder
 import org.json.JSONArray
@@ -18,6 +20,7 @@ import retrofit2.Response
 
 class MainActivity : AppCompatActivity() {
     private lateinit var navController: NavController
+    private lateinit var binding: FragmentHomeBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -42,7 +45,7 @@ class MainActivity : AppCompatActivity() {
                     Log.d("retrofitresponse", "price : ${resBody.price}")
                     Log.d("retrofitresponse","imagee : ${resBody.image}" )
                     Log.d("retrofitresponse", "rating : ${resBody.rating.rate}")
-
+                    //binding.rvUserSugests.adapter = SugestAdapter(response)
 
 
 

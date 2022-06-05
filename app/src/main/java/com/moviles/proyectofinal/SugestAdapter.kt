@@ -4,11 +4,12 @@ import android.content.ClipData
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.moviles.proyectofinal.databinding.ItemProfileBinding
+
 import com.moviles.proyectofinal.databinding.ItemSugestBinding
 import com.moviles.proyectofinal.remote.ItemEntry
 import org.json.JSONArray
 import org.json.JSONObject
+import retrofit2.Response
 
 class SugestAdapter (private val products: List<ItemEntry>): RecyclerView.Adapter<SugestAdapter.MainHolder>(){
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MainHolder {
